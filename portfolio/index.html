@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Professional Web Developer Portfolio showcasing work, skills, and contact information.">
+    <meta name="keywords" content="portfolio, web developer, projects, professional, responsive">
+    <meta name="author" content="Abdul Qadir">
+    <title>Professional Portfolio |Abdul Qadir</title>
+
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Include External Stylesheets and Libraries -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+           
+            </ul>
+            <div id="theme-switcher">
+                <span class="material-icons">dark_mode</span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="section home-section">
+        <div class="container">
+            <div class="home-content">
+                <h1 data-aos="fade-up">Hello, I am <span>Abdul Qadir</span></h1>
+                <p data-aos="fade-up" data-aos-delay="200">A Professional <span class="highlight">Web Developer</span></p>
+                <a href="#projects" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300">Explore My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 data-aos="fade-right">About Me</h2>
+            <div class="about-content" data-aos="fade-up">
+                <div class="profile-picture" style="background-image: url('Q.jpg');"></div>
+                <p>
+                    I am a passionate web developer specializing in modern web technologies. I focus on delivering optimized, high-performing applications with a user-centered design approach.
+                </p>
+                <p>
+                    My expertise lies in crafting responsive, interactive websites that not only look great but also drive results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <h2 data-aos="fade-right">Services</h2>
+            <div class="service-cards" data-aos="fade-up">
+                <div class="service-card">
+                    <span class="material-icons">code</span>
+                    <h3>Web Development</h3>
+                    <p>Building fast, responsive websites using modern technologies like HTML5, CSS3, and JavaScript frameworks.</p>
+                </div>
+                <div class="service-card">
+                    <span class="material-icons">design_services</span>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing elegant, user-friendly interfaces that enhance the user experience and increase engagement.</p>
+                </div>
+                <div class="service-card">
+                    <span class="material-icons">build</span>
+                    <h3>App Development</h3>
+                    <p>Developing cross-platform mobile applications that deliver a seamless experience on any device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Modals -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 data-aos="fade-right">Projects</h2>
+            <div class="projects-grid" data-aos="fade-up">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="home[1].png" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Online Examination System</h3>
+                        <p>Online Examination System with the help of Python Langauage using it's framework Django.</p>
+                        <button class="btn btn-secondary" onclick="openModal(1)">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Modal for Project Details -->
+                <div id="project-modal-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeModal(1)">&times;</span>
+                        <h2>Online Examination System</h2>
+                        <p>Online Examination System with the help of Python Langauage using it's framework Django,and HTML,CSS,JS for designing it's frontend with SQLite3 database for storing it's data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!--Resume Section-->
+      <section id="resume" class="section resume-section">
+        <div class="container">
+            <h2 data-aos="fade-right">Resume</h2>
+            <a href="AQresume.pdf" class="btn btn-primary" download>Download My Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 data-aos="fade-right">Contact Me</h2>
+            <form id="contact-form" class="contact-form" data-aos="fade-up">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+   
+
+    <footer>
+        <p>&copy; 2024 Abdul Qadir. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
